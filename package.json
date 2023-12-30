@@ -1,0 +1,23 @@
+{
+  "name": "react-js",
+  "version": "1.0.0",
+  "description": "learning react js",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Prash0265/React-JS.git"
+  },
+  "keywords": [
+    "React",
+    "PK"
+  ],
+  "author": "Prashanth Nandaram",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prash0265/React-JS/issues"
+  },
+  "homepage": "https://github.com/Prash0265/React-JS#readme"
+}
