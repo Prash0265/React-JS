@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Prash0265/React-JS/issues"
   },
-  "homepage": "https://github.com/Prash0265/React-JS#readme"
+  "homepage": "https://github.com/Prash0265/React-JS#readme",
+  "devDependencies": {
+    "parcel": "^2.10.3"
+  }
 }
