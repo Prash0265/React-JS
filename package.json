@@ -21,6 +21,12 @@
   },
   "homepage": "https://github.com/Prash0265/React-JS#readme",
   "devDependencies": {
-    "parcel": "^2.10.3"
+    "@babel/preset-react": "^7.23.3",
+    "parcel": "^2.10.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
