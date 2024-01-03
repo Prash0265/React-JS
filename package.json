@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "learning react js",
   "scripts": {
+    "start": "parcel index.html",
     "test": "jest"
   },
   "repository": {
