@@ -34,7 +34,7 @@ const Body = () => {
       </div>
       <div className="res-container">
         {listOfRestaurants.map((restaurant) => (
-          <Restaurantcard key={restaurant.info.id} resdata={restaurant} />
+          <Restaurantcard key={restaurant.info.id} resData={restaurant} />
         ))}
       </div>
     </div>

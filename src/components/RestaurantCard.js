@@ -1,10 +1,10 @@
 import { CDN_URL } from "../utils/constants";
 
 const Restaurantcard = (props) => {
-  const { resdata } = props;
+  const { resData } = props;
 
-  if (!resdata || !resdata.info) {
-    console.error("Invalid resdata:", resdata);
+  if (!resData || !resData.info) {
+    console.error("Invalid resdata:", resData);
     return null;
   }
 
@@ -12,13 +12,13 @@ const Restaurantcard = (props) => {
     <div className="res-card" style={{ backgroundColor: "#f0f0f0" }}>
       <img
         className="res-logo"
-        src={CDN_URL + resdata.info.cloudinaryImageId}
+        src={CDN_URL + resData.info.cloudinaryImageId}
         alt="Restaurant Logo"
       />
-      <h3>{resdata.info.name}</h3>
-      <h4>{resdata.info.cuisines.join(", ")}</h4>
-      <h4>{resdata.info.avgRating}</h4>
-      <h4>{resdata.info.sla.deliveryTime} minutes</h4>
+      <h3>{resData.info.name}</h3>
+      <h4>{resData.info.cuisines.join(", ")}</h4>
+      <h4>{resData.info.avgRating}</h4>
+      <h4>{resData.info.sla.deliveryTime} minutes</h4>
     </div>
   );
 };
