@@ -1,5 +1,5 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
+import ReactDOM from 'react-dom/client';
 import Header from "./components/Header";
 import Body from "./components/Body";
 
@@ -18,5 +18,5 @@ const AppLayout = () => {
   );
 };
 
-const root = createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<AppLayout />);
