@@ -1,22 +1,24 @@
 import Restaurantcard from "./RestaurantCard";
-import resObj from "../utils/mockData";
+
 import { useEffect, useState } from "react";
 
-if (!resObj) {
-  console.error("Invalid data structure for restaurants.");
-  // Render an error message or handle the error appropriately
-}
 
-// const { restaurants } = resObj;
 
 const Body = () => {
-  console.log("resObj", resObj); // Log resObj to check its structure
+
+  const [listOfRestaurants, setListOfRestaurants] = useState([]);
   useEffect(() => {
     console.log("useeffect called");
     fetchData();
   }, []);
 
-  const [listOfRestaurants, setListOfRestaurants] = useState(resObj);
+  const fetchData = async () =>{
+    const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.406498&lng=78.47724389999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+  
+    const json = await data.json();
+    console.log(json);
+    setListOfRestaurants(json.data.cards[5].card.card.gridElements.infoWithStyle.restaurants);
+  };
 
   return (
     <div className="body">
