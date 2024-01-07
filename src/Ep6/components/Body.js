@@ -11,7 +11,7 @@ const Body = () => {
   console.log("Body rendered"); // important check this once 01:52:00
 
   useEffect(() => {
-    console.log("useeffect called");
+    console.log("useffect called");
     fetchData();
   }, []);
 
