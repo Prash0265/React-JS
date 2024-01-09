@@ -7,6 +7,9 @@ import Contact from "./components/Contact";
 import Error from "./components/Error";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import RestaurantMenu from "./components/RestaurantMenu";
+//import Grocery from "./components/Grocery";
+import { lazy, Suspense } from "react";
+import Shimmer from "./components/Shimmer";
 
 /**
  * Header - logo, Nav Items
@@ -23,6 +26,7 @@ const AppLayout = () => {
   );
 };
 
+const Grocery = lazy(() => import("./components/Grocery"));
 const appRouter = createBrowserRouter([
   {
     path: "/",
@@ -43,6 +47,14 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurants/:resId",
         element: <RestaurantMenu />,
+      },
+      {
+        path: "/grocery",
+        element: (
+          <Suspense fallback={<Shimmer />}>
+            <Grocery />
+          </Suspense>
+        ),
       },
     ],
     errorElement: <Error />,
