@@ -29,7 +29,7 @@ class ThirdUserClass extends React.Component {
         <h2>Name: {name}</h2>
         <h3>Location: {location}</h3>
         <h4>Contact: kmrprashanth92@gmail.com</h4>
-        <img src={avatar_url}></img>
+        <img className="border border-solid border-black m-4" src={avatar_url}></img>
       </div>
     );
   }
